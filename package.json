@@ -1,0 +1,13 @@
+{
+  "name": "knowledge-base",
+  "version": "1.0.0",
+  "description": "Documents, wiki, and lectures",
+  "main": "index.js",
+  "repository": "https://github.com/Sakuten/knowledge-base",
+  "author": "coord.e <me@coord-e.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
