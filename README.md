@@ -2,6 +2,8 @@
 
 ようこそSakutenDev Wikiへ。
 
+これは[創作展開発チーム](https://github.com/Sakuten)のWikiです。
+
 ここでは勉強会資料を置いたり、自分の書いたコードの解説を置いたり、プログラミングの知見を共有したりします。
 
 このWikiは [Sakuten/knowledge-base](https://github.com/Sakuten/knowledge-base) からデプロイされています。
