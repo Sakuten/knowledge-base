@@ -8,5 +8,5 @@
 
 このWikiは [Sakuten/knowledge-base](https://github.com/Sakuten/knowledge-base) からデプロイされています。
 
-記事の追加方法については [資料を追加するには](docs/misc/how-to-add-post.md) をご覧ください。
+記事の追加方法については [資料を追加するには](docs/misc/wiki-usage/how-to-add-post.md) をご覧ください。
 
