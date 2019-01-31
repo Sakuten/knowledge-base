@@ -9,5 +9,8 @@
   "private": false,
   "devDependencies": {
     "gitbook-cli": "^2.3.2"
+  },
+  "scripts": {
+    "start": "yarn gitbook serve"
   }
 }
