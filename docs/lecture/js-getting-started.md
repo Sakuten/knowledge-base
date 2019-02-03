@@ -272,6 +272,8 @@ Hello Anharu
 undefined
 ```
 
+`console.log()`や`parseInt()`も関数なのです。
+
 ##　Object（オブジェクト）
 Objectも型の一つです。
 
