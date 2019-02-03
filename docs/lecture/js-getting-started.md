@@ -168,7 +168,7 @@ TypeError: Assignment to constant variable.""
 定義の仕方は
 
 ```
-let 変数の名前（箱の名前）= 値
+let 変数の名前 = 値
 ```
 
 値を変えたいときは、
