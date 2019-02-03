@@ -52,7 +52,7 @@ Microsoftが開発したエディタです。
 
 軽めです。
 
-Gitと連携できたり、機能は豊富ですね。
+デフォルトでGitと連携できたり、機能は豊富ですね。
 
 https://code.visualstudio.com
 
