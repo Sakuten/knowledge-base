@@ -8,4 +8,5 @@
 * [Docker](docs/lecture/introducing-docker/0-index.md)
   * [Dockerとは?](docs/lecture/introducing-docker/1-what-is-docker.md)
   * [Dockerを使う](docs/lecture/introducing-docker/2-use-docker.md)
+  * [Dockerの概念](docs/lecture/introducing-docker/3-docker-concepts.md)
 
