@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "yarn gitbook serve",
-    "textlint": "textlint -f pretty-error docs/"
+    "textlint": "textlint -f pretty-error docs/",
+    "textlint-fix": "textlint docs/ --fix"
   }
 }
