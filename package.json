@@ -8,7 +8,14 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "textlint": "^11.2.3",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-filter-rule-whitelist": "^2.0.0",
+    "textlint-rule-incremental-headers": "^0.2.0",
+    "textlint-rule-no-todo": "^2.0.1",
+    "textlint-rule-preset-ja-technical-writing": "^3.1.2",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
   "scripts": {
     "start": "yarn gitbook serve"
