@@ -3,7 +3,15 @@
     "preset-ja-technical-writing": true,
     "incremental-headers": true,
     "no-todo": true,
-    "spellcheck-tech-word": true
+    "spellcheck-tech-word": true,
+    "ja-technical-writing/ja-no-weak-phrase": false,
+    "ja-technical-writing/ja-no-mixed-period": false,
+    "ja-technical-writing/no-exclamation-question-mark": {
+      "allowHalfWidthExclamation": true,
+      "allowFullWidthExclamation": false,
+      "allowHalfWidthQuestion": true,
+      "allowFullWidthQuestion": false
+    }
   },
   "filters": {
     "comments": true,
