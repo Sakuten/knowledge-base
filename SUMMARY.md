@@ -7,4 +7,5 @@
 * [JavaScript(ES6)入門](docs/lecture/js-getting-started.md)
 * [Docker](docs/lecture/introducing-docker/0-index.md)
   * [Dockerとは?](docs/lecture/introducing-docker/1-what-is-docker.md)
+  * [Dockerを使う](docs/lecture/introducing-docker/2-use-docker.md)
 
