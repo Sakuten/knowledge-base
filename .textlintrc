@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "preset-ja-technical-writing": true,
+    "incremental-headers": true,
+    "no-todo": true,
+    "spellcheck-tech-word": true
+  },
+  "filters": {
+    "comments": true,
+    "whitelist": {
+      "allow": [
+        "SakutenDev"
+      ]
+    }
+  }
+}
