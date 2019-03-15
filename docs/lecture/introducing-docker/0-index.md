@@ -34,6 +34,11 @@
 - ソフトウェア: 主にユーザーと直接のインタラクションなしで動くようなソフトウェア([MySQL](https://www.mysql.com/jp/)、[nginx](https://nginx.org/ja/)など)
 - ライブラリ: 共有ライブラリ。([glibc](https://www.gnu.org/s/libc/)など)
 
+
+## 表記について
+
+- `$ command`: $から始まるコードブロックは、コマンドラインを示している。Windowsならcmd.exeやpowershell、macOSならTerminal.appやiTerm2、GNU/Linuxなら好きなターミナルで、`$`から後の部分を打ち込む。
+
 ## 次
 
 [Dockerとは?](1-what-is-docker.md)
