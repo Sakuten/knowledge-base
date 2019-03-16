@@ -28,11 +28,22 @@ if [ "$TRAVIS_PULL_REQUEST" = "false" ] || [ -z "$TRAVIS_PULL_REQUEST" ]; then
 fi
 
 # Fetch other branch
+# To avoid ambiguous argument
+# http://stackoverflow.com/questions/37303969/git-fatal-ambiguous-argument-head-unknown-revision-or-
 if [ "$TRAVIS" == "true" ]; then
-  git checkout $TRAVIS_BRANCH
-  git pull origin $TRAVIS_BRANCH
+  #resolving `detached HEAD` by attaching HEAD to the `TRAVIS_FROM_BRANCH` branch
+  TRAVIS_FROM_BRANCH="travis_from_branch"
+  git branch $TRAVIS_FROM_BRANCH
+  git checkout $TRAVIS_FROM_BRANCH
 
-  git checkout $TRAVIS_PULL_REQUEST_BRANCH
+  #fetching `TRAVIS_BRANCH` branch
+  git fetch origin $TRAVIS_BRANCH
+  git checkout -qf FETCH_HEAD
+  git branch $TRAVIS_BRANCH
+  git checkout $TRAVIS_BRANCH
+
+  #switch to `TRAVIS_FROM_BRANCH`
+  git checkout $TRAVIS_FROM_BRANCH
 fi
 
 # Install saddler
