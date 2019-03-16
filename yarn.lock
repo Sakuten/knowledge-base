@@ -12,11 +12,26 @@
   dependencies:
     "@azu/format-text" "^1.0.1"
 
+"@bahmutov/data-driven@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@bahmutov/data-driven/-/data-driven-1.0.0.tgz#6897061cd61a0afc26a7079527bfbb1073b4228a"
+  dependencies:
+    check-more-types "2.24.0"
+    lazy-ass "1.6.0"
+
 "@textlint-rule/textlint-rule-no-invalid-control-character@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@textlint-rule/textlint-rule-no-invalid-control-character/-/textlint-rule-no-invalid-control-character-1.2.0.tgz#3e8f03258d06b7deb2592bdb13626659c46abbf5"
   dependencies:
     execall "^1.0.0"
+
+"@textlint-rule/textlint-rule-no-unmatched-pair@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@textlint-rule/textlint-rule-no-unmatched-pair/-/textlint-rule-no-unmatched-pair-1.0.7.tgz#c7c18d2ddac913fa4e5d98d998bb3e97d4f73cb6"
+  dependencies:
+    sentence-splitter "^3.0.11"
+    textlint-rule-helper "2.0.1"
+    textlint-tester "5.0.1"
 
 "@textlint/ast-node-types@^4.0.2", "@textlint/ast-node-types@^4.2.1":
   version "4.2.1"
@@ -28,7 +43,7 @@
   dependencies:
     "@textlint/ast-node-types" "^4.2.1"
 
-"@textlint/feature-flag@^3.1.2":
+"@textlint/feature-flag@^3.0.5", "@textlint/feature-flag@^3.1.2":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@textlint/feature-flag/-/feature-flag-3.1.2.tgz#01b21b688e2779e74ac1b7b6e7ab77d93b5ce078"
   dependencies:
@@ -52,7 +67,7 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@textlint/get-config-base-dir/-/get-config-base-dir-2.0.0.tgz#3d0e862e1dd67cf8286ca52f8bd911e10dca2941"
 
-"@textlint/kernel@^3.1.4":
+"@textlint/kernel@^3.0.0", "@textlint/kernel@^3.1.4":
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-3.1.4.tgz#a81a0e953d8ee1a8ec047df25bb2f410002e30dc"
   dependencies:
@@ -139,6 +154,10 @@
 "@types/bluebird@^3.5.18":
   version "3.5.26"
   resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.26.tgz#a38c438ae84fa02431d6892edf86e46edcbca291"
+
+"@types/debug@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.30.tgz#dc1e40f7af3b9c815013a7860e6252f6352a84df"
 
 JSONStream@~1.3.1:
   version "1.3.4"
@@ -250,7 +269,7 @@ ansi-regex@^3.0.0, ansi-regex@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
 
-ansi-styles@^2.2.1:
+ansi-styles@^2.0.1, ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
@@ -357,6 +376,13 @@ aws-sign2@~0.7.0:
 aws4@^1.2.1, aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
+
+babel-runtime@^6.26.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
+  dependencies:
+    core-js "^2.4.0"
+    regenerator-runtime "^0.11.0"
 
 bail@^1.0.0:
   version "1.0.3"
@@ -587,6 +613,10 @@ check-ends-with-period@^1.0.1:
     emoji-regex "^6.4.1"
     end-with "^1.0.2"
 
+check-more-types@2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/check-more-types/-/check-more-types-2.24.0.tgz#1420ffb10fd444dcfc79b43891bbfffd32a84600"
+
 chmodr@~1.0.2:
   version "1.0.2"
   resolved "http://registry.npmjs.org/chmodr/-/chmodr-1.0.2.tgz#04662b932d0f02ec66deaa2b0ea42811968e3eb9"
@@ -598,6 +628,10 @@ chownr@^1.0.1:
 chownr@~1.0.1:
   version "1.0.1"
   resolved "http://registry.npmjs.org/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
+
+ci-info@^1.0.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
 
 circular-json@^0.3.1:
   version "0.3.3"
@@ -682,6 +716,12 @@ commandpost@^1.0.1, commandpost@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/commandpost/-/commandpost-1.4.0.tgz#89218012089dfc9b67a337ba162f15c88e0f1048"
 
+common-tags@1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.7.2.tgz#24d9768c63d253a56ecff93845b44b4df1d52771"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -727,6 +767,10 @@ copy-concurrently@^1.0.0:
     mkdirp "^0.5.1"
     rimraf "^2.5.4"
     run-queue "^1.0.0"
+
+core-js@^2.4.0:
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -842,6 +886,10 @@ dezalgo@^1.0.0, dezalgo@^1.0.1, dezalgo@^1.0.2, dezalgo@~1.0.3:
     asap "^2.0.0"
     wrappy "1"
 
+diff@^1.3.2:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-1.4.0.tgz#7f28d2eb9ee7b15a97efd89ce63dcfdaa3ccbabf"
+
 diff@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/diff/-/diff-2.2.3.tgz#60eafd0d28ee906e4e8ff0a52c1229521033bf99"
@@ -849,6 +897,13 @@ diff@^2.2.2:
 diff@^3.3.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
+
+disparity@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/disparity/-/disparity-2.0.0.tgz#57ddacb47324ae5f58d2cc0da886db4ce9eeb718"
+  dependencies:
+    ansi-styles "^2.0.1"
+    diff "^1.3.2"
 
 dot-prop@^4.1.0:
   version "4.2.0"
@@ -949,6 +1004,12 @@ es6-promisify@^5.0.0:
   dependencies:
     es6-promise "^4.0.3"
 
+escape-quotes@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/escape-quotes/-/escape-quotes-1.0.2.tgz#b4896d4a6cf82dd5b33f49b713408c6380f6cd97"
+  dependencies:
+    escape-string-regexp "^1.0.5"
+
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -956,6 +1017,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
 esprima@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
+
+estree-walker@^0.5.0:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.5.2.tgz#d3850be7529c9580d815600b53126515e146dd39"
 
 execa@^0.7.0:
   version "0.7.0"
@@ -1045,6 +1110,14 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
+folktale@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/folktale/-/folktale-2.0.1.tgz#6dc26a65565aefdef9520223e022dddf5b8d8462"
+
+folktale@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/folktale/-/folktale-2.1.0.tgz#3332b9e37b4b92150788b72bd0e2ddd8d70e4096"
+
 forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
@@ -1101,6 +1174,14 @@ fs-extra@3.0.1:
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^3.0.0"
+    universalify "^0.1.0"
+
+fs-extra@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
     universalify "^0.1.0"
 
 fs-vacuum@~1.2.10, fs-vacuum@~1.2.9:
@@ -1220,6 +1301,10 @@ get-stream@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npmjs.org/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
 
+get-url-origin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/get-url-origin/-/get-url-origin-1.0.1.tgz#edebfcc085433e84c6b32a5738b0996edfd5a7b9"
+
 getpass@^0.1.1:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
@@ -1336,6 +1421,10 @@ has-color@^0.1.7:
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
+
+has-only@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/has-only/-/has-only-1.1.1.tgz#0ed2b101e73a2226254421464c65e381affcce66"
 
 has-symbols@^1.0.0:
   version "1.0.0"
@@ -1518,6 +1607,12 @@ is-callable@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
 
+is-ci@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-1.1.0.tgz#247e4162e7860cebbdaf30b774d6b0ac7dcfe7a5"
+  dependencies:
+    ci-info "^1.0.0"
+
 is-data-descriptor@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-data-descriptor/-/is-data-descriptor-1.0.0.tgz#d84876321d0e7add03990406abbbbd36ba9268c7"
@@ -1618,7 +1713,7 @@ is-retry-allowed@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-1.1.0.tgz#11a060568b67339444033d0125a61a20d564fb34"
 
-is-stream@^1.0.0, is-stream@^1.1.0:
+is-stream@^1.0.0, is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
@@ -1664,6 +1759,13 @@ isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
+isomorphic-fetch@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+  dependencies:
+    node-fetch "^1.0.1"
+    whatwg-fetch ">=0.10.0"
+
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
@@ -1686,6 +1788,10 @@ js-yaml@^3.12.0, js-yaml@^3.2.4, js-yaml@^3.6.1, js-yaml@^3.9.1:
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
+
+jsesc@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.1.tgz#e421a2a8e20d6b0819df28908f782526b96dd1fe"
 
 json-parse-better-errors@^1.0.0, json-parse-better-errors@^1.0.1:
   version "1.0.2"
@@ -1718,6 +1824,12 @@ json5@^1.0.1:
 jsonfile@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-3.0.1.tgz#a5ecc6f65f53f662c4415c7675a0331d0992ec66"
+  optionalDependencies:
+    graceful-fs "^4.1.6"
+
+jsonfile@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
   optionalDependencies:
     graceful-fs "^4.1.6"
 
@@ -1754,7 +1866,7 @@ kuromoji@0.1.1:
     doublearray "0.0.2"
     zlibjs "^0.2.0"
 
-kuromojin@^1.0.2, kuromojin@^1.1.0, kuromojin@^1.2.1, kuromojin@^1.3.1, kuromojin@^1.3.2:
+kuromojin@^1.0.2, kuromojin@^1.1.0, kuromojin@^1.2.1, kuromojin@^1.3.1, kuromojin@^1.3.2, kuromojin@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/kuromojin/-/kuromojin-1.4.0.tgz#2d955746736981e73d02dbfd20eeee8110cddab2"
   dependencies:
@@ -1765,6 +1877,10 @@ latest-version@^3.0.0:
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
   dependencies:
     package-json "^4.0.0"
+
+lazy-ass@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/lazy-ass/-/lazy-ass-1.6.0.tgz#7999655e8646c17f089fdd187d150d3324d54513"
 
 lazy-property@~1.0.0:
   version "1.0.0"
@@ -1994,7 +2110,7 @@ mississippi@^2.0.0:
     stream-each "^1.1.0"
     through2 "^2.0.0"
 
-"mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
+mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -2039,6 +2155,36 @@ mute-stream@~0.0.4:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
+nlcst-parse-japanese@^1.1.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nlcst-parse-japanese/-/nlcst-parse-japanese-1.2.0.tgz#e160741efcda8a6dd7b961e3d342699dc600edf1"
+  dependencies:
+    kuromojin "^1.4.0"
+    nlcst-types "^1.2.2"
+    unist-types "^1.1.4"
+
+nlcst-pattern-match@^1.3.3:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/nlcst-pattern-match/-/nlcst-pattern-match-1.3.5.tgz#f04bdf028f1478520e46574c5362a24499d1ab00"
+  dependencies:
+    "@types/debug" "^0.0.30"
+    debug "^3.1.0"
+    estree-walker "^0.5.0"
+    nlcst-to-string "^2.0.0"
+    nlcst-types "^1.2.2"
+    snap-shot-it "^4.0.1"
+    unist-types "^1.1.4"
+
+nlcst-to-string@^2.0.0, nlcst-to-string@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nlcst-to-string/-/nlcst-to-string-2.0.2.tgz#7125af4d4d369850c697192a658f01f36af9937b"
+
+nlcst-types@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/nlcst-types/-/nlcst-types-1.2.2.tgz#f7c2bd5385a46e772924b759fff0ba9ae222cdce"
+  dependencies:
+    unist-types "^1.1.4"
+
 node-fetch-npm@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/node-fetch-npm/-/node-fetch-npm-2.0.2.tgz#7258c9046182dca345b4208eda918daf33697ff7"
@@ -2046,6 +2192,13 @@ node-fetch-npm@^2.0.2:
     encoding "^0.1.11"
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
+
+node-fetch@^1.0.1:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
 
 node-gyp@~3.6.0, node-gyp@~3.6.2:
   version "3.6.3"
@@ -2766,6 +2919,10 @@ qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
+ramda@0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+
 rc-config-loader@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/rc-config-loader/-/rc-config-loader-2.0.2.tgz#46eb2f98fb5b2aa7b1119d66c0554de5133f1bc1"
@@ -2915,6 +3072,10 @@ realize-package-specifier@~3.0.1:
   dependencies:
     dezalgo "^1.0.1"
     npm-package-arg "^4.1.1"
+
+regenerator-runtime@^0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
 regex-not@^1.0.2:
   version "1.0.2"
@@ -3150,7 +3311,7 @@ sentence-splitter@^2.0.0, sentence-splitter@^2.2.0:
     concat-stream "^1.5.2"
     structured-source "^3.0.2"
 
-sentence-splitter@^3.0.10:
+sentence-splitter@^3.0.10, sentence-splitter@^3.0.11:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.11.tgz#82d98f0fd7a392e0e6c49b0730ae7b880bfde0b2"
   dependencies:
@@ -3199,6 +3360,44 @@ slide@^1.1.3, slide@^1.1.5, slide@~1.1.3, slide@~1.1.6:
 smart-buffer@^1.0.13:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
+
+snap-shot-compare@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/snap-shot-compare/-/snap-shot-compare-2.7.1.tgz#e7ac19d2a0385414fa8f847c4d01855f49383fdb"
+  dependencies:
+    check-more-types "2.24.0"
+    disparity "2.0.0"
+    folktale "2.0.1"
+    lazy-ass "1.6.0"
+    strip-ansi "4.0.0"
+    variable-diff "1.1.0"
+
+snap-shot-core@5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/snap-shot-core/-/snap-shot-core-5.0.4.tgz#eb2d165fe366e2a8460ee3dc250b7ec21596a522"
+  dependencies:
+    check-more-types "2.24.0"
+    common-tags "1.7.2"
+    debug "3.1.0"
+    escape-quotes "1.0.2"
+    folktale "2.1.0"
+    is-ci "1.1.0"
+    jsesc "2.5.1"
+    lazy-ass "1.6.0"
+    mkdirp "0.5.1"
+    ramda "0.25.0"
+
+snap-shot-it@^4.0.1:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/snap-shot-it/-/snap-shot-it-4.1.5.tgz#308ecc1bf4862e7736a3acb9e3b2d290cf87d7a4"
+  dependencies:
+    "@bahmutov/data-driven" "1.0.0"
+    check-more-types "2.24.0"
+    debug "3.1.0"
+    has-only "1.1.1"
+    ramda "0.25.0"
+    snap-shot-compare "2.7.1"
+    snap-shot-core "5.0.4"
 
 sntp@1.x.x:
   version "1.0.9"
@@ -3367,17 +3566,17 @@ stringstream@~0.0.4:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.6.tgz#7880225b0d4ad10e30927d167a1d6f2fd3b33a72"
 
+strip-ansi@4.0.0, strip-ansi@^4.0.0, strip-ansi@~4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
+  dependencies:
+    ansi-regex "^3.0.0"
+
 strip-ansi@^3.0.0, strip-ansi@^3.0.1, strip-ansi@~3.0.1:
   version "3.0.1"
   resolved "http://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz#6a385fb8853d952d5ff05d0e8aaf94278dc63dcf"
   dependencies:
     ansi-regex "^2.0.0"
-
-strip-ansi@^4.0.0, strip-ansi@~4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
-  dependencies:
-    ansi-regex "^3.0.0"
 
 strip-bom@^2.0.0:
   version "2.0.0"
@@ -3480,6 +3679,12 @@ textlint-filter-rule-whitelist@^2.0.0:
     "@textlint/regexp-string-matcher" "^1.0.2"
     rc-config-loader "^2.0.1"
 
+textlint-rule-helper@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-helper/-/textlint-rule-helper-2.0.1.tgz#f28dc20d3e06f60373aa04a97b965daa77d196b9"
+  dependencies:
+    unist-util-visit "^1.1.0"
+
 textlint-rule-helper@^1.1.2, textlint-rule-helper@^1.1.4, textlint-rule-helper@^1.1.5:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/textlint-rule-helper/-/textlint-rule-helper-1.2.0.tgz#be68d47a5146b16dd116278c9aeb7bd35631ccda"
@@ -3498,6 +3703,13 @@ textlint-rule-helper@^2.0.0:
 textlint-rule-incremental-headers@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/textlint-rule-incremental-headers/-/textlint-rule-incremental-headers-0.2.0.tgz#ab056713b60acdb8ebf2a2726425e67b01ad9b2c"
+
+textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana/-/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana-2.0.1.tgz#ea6f94cb9ced758fb2553dea2e9fe714f31f0aed"
+  dependencies:
+    match-index "^1.0.1"
+    textlint-rule-helper "^2.0.0"
 
 textlint-rule-ja-no-abusage@^1.2.2:
   version "1.2.2"
@@ -3522,6 +3734,21 @@ textlint-rule-ja-no-redundant-expression@^2.0.0:
     morpheme-match "^1.0.1"
     morpheme-match-all "^1.1.0"
 
+textlint-rule-ja-no-space-around-parentheses@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-space-around-parentheses/-/textlint-rule-ja-no-space-around-parentheses-2.0.1.tgz#556a60e679da9b4c98244c67e7961ac2e540bec1"
+  dependencies:
+    match-index "^1.0.1"
+    textlint-rule-helper "^2.0.0"
+
+textlint-rule-ja-no-space-between-full-width@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-space-between-full-width/-/textlint-rule-ja-no-space-between-full-width-2.0.1.tgz#921f78561564dd00c8733c230254acd8a55ded67"
+  dependencies:
+    match-index "^1.0.1"
+    regx "^1.0.4"
+    textlint-rule-helper "^2.0.0"
+
 textlint-rule-ja-no-successive-word@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-successive-word/-/textlint-rule-ja-no-successive-word-1.1.0.tgz#243778076ce3f80d76bf2b9b73156c161e33c998"
@@ -3535,6 +3762,34 @@ textlint-rule-ja-no-weak-phrase@^1.0.2:
     kuromojin "^1.3.1"
     morpheme-match "^1.0.1"
     morpheme-match-all "^1.1.0"
+
+textlint-rule-ja-space-after-exclamation@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-after-exclamation/-/textlint-rule-ja-space-after-exclamation-2.0.1.tgz#3bc5d48c13269bd9cb1b18eb82e3d4eae44dfba3"
+  dependencies:
+    match-index "^1.0.1"
+    textlint-rule-helper "^2.0.0"
+
+textlint-rule-ja-space-after-question@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-after-question/-/textlint-rule-ja-space-after-question-2.0.1.tgz#122260cb97d203768820276b4d09bf5270b11dfa"
+  dependencies:
+    match-index "^1.0.1"
+    textlint-rule-helper "^2.0.0"
+
+textlint-rule-ja-space-around-code@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-around-code/-/textlint-rule-ja-space-around-code-2.0.1.tgz#6b7011dab69488f1eddd445554e7cddeaf1a90d3"
+  dependencies:
+    match-index "^1.0.1"
+    textlint-rule-helper "^2.0.0"
+
+textlint-rule-ja-space-between-half-and-full-width@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-between-half-and-full-width/-/textlint-rule-ja-space-between-half-and-full-width-2.0.1.tgz#a527f83bd833149763e4043965f796c9ec2192ba"
+  dependencies:
+    match-index "^1.0.1"
+    textlint-rule-helper "^2.0.0"
 
 textlint-rule-max-comma@^1.0.2:
   version "1.0.4"
@@ -3557,6 +3812,16 @@ textlint-rule-max-ten@^2.0.1:
     kuromojin "^1.0.2"
     sentence-splitter "^2.0.0"
     structured-source "^3.0.2"
+    textlint-rule-helper "^2.0.0"
+
+textlint-rule-no-dead-link@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-dead-link/-/textlint-rule-no-dead-link-4.4.1.tgz#013f4eb268a3b093d2ea942c786807ed8a2a8873"
+  dependencies:
+    fs-extra "^5.0.0"
+    get-url-origin "^1.0.1"
+    isomorphic-fetch "^2.2.1"
+    minimatch "^3.0.4"
     textlint-rule-helper "^2.0.0"
 
 textlint-rule-no-double-negative-ja@^1.0.4:
@@ -3635,6 +3900,28 @@ textlint-rule-no-todo@^2.0.1:
   dependencies:
     textlint-rule-helper "^2.0.0"
 
+textlint-rule-prefer-tari-tari@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/textlint-rule-prefer-tari-tari/-/textlint-rule-prefer-tari-tari-1.0.3.tgz#0164a473c55810dab87a1a3848156614fbc7f149"
+  dependencies:
+    nlcst-parse-japanese "^1.1.2"
+    nlcst-pattern-match "^1.3.3"
+    nlcst-to-string "^2.0.1"
+    textlint-rule-helper "^2.0.0"
+    textlint-util-to-string "^2.1.1"
+
+textlint-rule-preset-ja-spacing@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-ja-spacing/-/textlint-rule-preset-ja-spacing-2.0.1.tgz#4426e812b2fd525ed4c39d07ede2984ee9bf89d9"
+  dependencies:
+    textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana "^2.0.1"
+    textlint-rule-ja-no-space-around-parentheses "^2.0.1"
+    textlint-rule-ja-no-space-between-full-width "^2.0.1"
+    textlint-rule-ja-space-after-exclamation "^2.0.1"
+    textlint-rule-ja-space-after-question "^2.0.1"
+    textlint-rule-ja-space-around-code "^2.0.1"
+    textlint-rule-ja-space-between-half-and-full-width "^2.0.1"
+
 textlint-rule-preset-ja-technical-writing@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/textlint-rule-preset-ja-technical-writing/-/textlint-rule-preset-ja-technical-writing-3.1.2.tgz#d5d34a03b735abff0e9cf89e086c459a69134ce1"
@@ -3706,6 +3993,14 @@ textlint-rule-spellcheck-tech-word@^5.0.0:
     spellcheck-technical-word "^2.0.0"
     textlint-rule-helper "^1.1.2"
 
+textlint-tester@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-tester/-/textlint-tester-5.0.1.tgz#968b4b34bbda2614a99ec85b82c56488c86bc255"
+  dependencies:
+    "@textlint/feature-flag" "^3.0.5"
+    "@textlint/kernel" "^3.0.0"
+    textlint "^11.0.1"
+
 textlint-util-to-string@^1.1.0, textlint-util-to-string@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/textlint-util-to-string/-/textlint-util-to-string-1.2.1.tgz#1cf89956d27555a55e9588c06b35a50f0d1d46f9"
@@ -3720,7 +4015,7 @@ textlint-util-to-string@^2.1.1:
     object-assign "^4.0.1"
     structured-source "^3.0.2"
 
-textlint@^11.2.3:
+textlint@^11.0.1, textlint@^11.2.3:
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.2.3.tgz#7f7878453284f1047742458da2b5fa3a376a2e25"
   dependencies:
@@ -3894,6 +4189,10 @@ unique-string@^1.0.0:
   dependencies:
     crypto-random-string "^1.0.0"
 
+unist-types@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/unist-types/-/unist-types-1.1.4.tgz#9935a83c13ba6038d2ef0079664c7e71e909497f"
+
 unist-util-filter@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/unist-util-filter/-/unist-util-filter-0.2.1.tgz#e2f7876828903a6a9308e362051f86b14f35b545"
@@ -4011,6 +4310,13 @@ validate-npm-package-name@~2.2.2:
   dependencies:
     builtins "0.0.7"
 
+variable-diff@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/variable-diff/-/variable-diff-1.1.0.tgz#d2bd5c66db76c13879d96e6a306edc989df978da"
+  dependencies:
+    chalk "^1.1.1"
+    object-assign "^4.0.1"
+
 verror@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/verror/-/verror-1.10.0.tgz#3a105ca17053af55d6e270c1f8288682e18da400"
@@ -4043,6 +4349,10 @@ wcwidth@^1.0.0:
   resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
   dependencies:
     defaults "^1.0.3"
+
+whatwg-fetch@>=0.10.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
 
 which@1, which@^1.2.12, which@^1.2.9:
   version "1.3.1"

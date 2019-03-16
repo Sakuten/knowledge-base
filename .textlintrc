@@ -4,6 +4,10 @@
     "incremental-headers": true,
     "no-todo": true,
     "spellcheck-tech-word": true,
+    "no-dead-link": true,
+    "@textlint-rule/no-unmatched-pair": true,
+    "prefer-tari-tari": true,
+    "preset-ja-spacing": true,
     "ja-technical-writing/ja-no-weak-phrase": false,
     "ja-technical-writing/ja-no-mixed-period": false,
     "ja-technical-writing/no-exclamation-question-mark": {
