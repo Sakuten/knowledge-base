@@ -13,7 +13,7 @@ cd knowledge-base
 yarn install --dev
 ```
 
-これで環境は構築できました！
+これで環境は構築できました。
 
 下記のコマンドで開発サーバが立ち上がり、レンダリングされたGitBookを見ることができます。
 
@@ -34,8 +34,6 @@ git push origin feature/your-post
 ```
 
 PRがマージされると、デプロイされたWikiで追加された項目を見ることができるようになります。お疲れ様でした。
-
-TODO: WOWOWO
 
 ## ディレクトリ構造
 
