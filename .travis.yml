@@ -5,3 +5,5 @@ dist: xenial
 cache: yarn
 script:
   - yarn run textlint
+after_failure:
+  - ./ci/review-textlint.sh
