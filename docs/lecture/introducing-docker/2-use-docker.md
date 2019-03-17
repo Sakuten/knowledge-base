@@ -15,7 +15,9 @@ Docker CEは無料で利用できる。
 
 インストール方法は本当によく変わるので、英語が読める人は[公式ドキュメント](https://docs.docker.com/install/)を読むのがいいと思う。
 
+{% hint style='info' %}
 あまり私の所有していないプラットフォームでのインストール方法については自信がないので、あえて抽象的な説明にとどめておく。ごめんなさい。わからなかったら気軽にDiscordなどで質問してください。
+{% endhint %}
 
 ### macOSの人
 
@@ -45,7 +47,11 @@ Microsoft Windows 10 64-bitのProfessionalまたはEnterpriseが必要。
 $ docker -v
 ```
 
-バージョンが出てきたと思う。(GNU/Linuxユーザーで権限がどうとか言われた場合は[これをみて](https://docs.docker.com/install/linux/linux-postinstall/))
+バージョンが出てきたと思う。
+
+{% hint style='tip' %}
+GNU/Linuxユーザーで権限がどうとか言われた場合は[これをみて](https://docs.docker.com/install/linux/linux-postinstall/)
+{% endhint %}
 
 ではいよいよHello Worldだ。いざ
 
