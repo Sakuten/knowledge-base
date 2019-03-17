@@ -4,9 +4,9 @@
 
 とりわけ以下のようなDocker特有の概念について、今までやったことと対応づけながら説明していく。
 
-- イメージ(image)
-- コンテナ(container)
-- レジストリ(registry)
+- [イメージ(image)](#イメージimage)
+- [コンテナ(container)](#コンテナcontainer)
+- [レジストリ(registry)](#レジストリregistry)
 
 ## イメージ(image)
 
@@ -211,7 +211,7 @@ $ docker container start --attach <コンテナID/名前>
 
 すなわち`docker container create`と`docker container start`を一緒にやってくれている。便利なのでよく使われる。
 
-## レジストリ (registry)
+## レジストリ(registry)
 
 レジストリは、Dockerイメージを保持し、共有するシステムだ。
 一般的にインターネット上にサービスとして存在し、そこと通信することで利用する。
