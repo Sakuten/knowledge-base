@@ -1,6 +1,6 @@
 {
   "language": "ja",
-  "plugins": ["collapsible-chapters", "back-to-top-button", "copy-code-button", "heading-anchors", "page-toc-button", "hide-published-with"],
+  "plugins": ["collapsible-chapters", "back-to-top-button", "copy-code-button", "heading-anchors", "page-toc-button", "hide-published-with", "advanced-emoji"],
   "pluginsConfig": {
     "page-toc-button": {
       "maxTocDepth": 2,
