@@ -6,7 +6,7 @@
 
 - イメージ(image)
 - コンテナ(container)
-- レイヤー(layer)
+- レジストリ(registry)
 
 ## イメージ(image)
 
@@ -210,3 +210,15 @@ $ docker container start --attach <コンテナID/名前>
 前々から出てきている`docker run`コマンド、これは「イメージからコンテナを作成し、それを実行」ということをやっている。
 
 すなわち`docker container create`と`docker container start`を一緒にやってくれている。便利なのでよく使われる。
+
+## レジストリ (registry)
+
+レジストリは、Dockerイメージを保持し、共有するシステムだ。
+一般的にインターネット上にサービスとして存在し、そこと通信することで利用する。
+
+今まで使ってきた`nginx`や`ubuntu`のイメージは全てレジストリ上にあり、そこから取得していたのだ。(だからダウンロードが必要だった)
+
+デフォルトのレジストリは[Docker Hub](https://hub.docker.com/)であり、特に指定しない場合はここが使われる。
+他にも[quay.io](https://quay.io/)のようなレジストリサービスが存在しているほか、自分でレジストリを立てることもできる。
+
+`docker image push`、`docker image pull`でそれぞれレジストリにイメージをアップロード、ダウンロードできるが、ここでは扱わない。詳しくは参考文献を参照してほしい。
