@@ -38,6 +38,7 @@
 ## 表記について
 
 - `$ command`: $から始まるコードブロックは、コマンドラインを示している。Windowsならcmd.exeやpowershell、macOSならTerminal.appやiTerm2、GNU/Linuxなら好きなターミナルで、`$`から後の部分を打ち込む。
+- `< something >`: そのまま入力するのではなく、適宜読み替えてほしい
 
 ## 次
 
