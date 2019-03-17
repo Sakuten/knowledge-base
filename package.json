@@ -11,6 +11,7 @@
     "gitbook-cli": "^2.3.2"
   },
   "scripts": {
-    "start": "yarn gitbook serve"
+    "start": "yarn gitbook serve",
+    "prepublish": "gitbook install"
   }
 }
