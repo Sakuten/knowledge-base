@@ -1,10 +1,10 @@
 {
   "language": "ja",
-  "plugins": ["collapsible-chapters", "back-to-top-button", "copy-code-button", "heading-anchors", "page-toc"],
+  "plugins": ["collapsible-chapters", "back-to-top-button", "copy-code-button", "heading-anchors", "page-toc-button"],
   "pluginsConfig": {
-    "page-toc": {
-      "selector": ".markdown-section h1, .markdown-section h2",
-      "showByDefault": true
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
     }
   }
 }
