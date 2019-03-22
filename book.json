@@ -1,3 +1,10 @@
 {
-  "language": "ja"
+  "language": "ja",
+  "plugins": ["collapsible-chapters", "back-to-top-button", "copy-code-button", "heading-anchors", "page-toc-button", "advanced-emoji"],
+  "pluginsConfig": {
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
+    }
+  }
 }
