@@ -77,3 +77,39 @@ http://localhost:3000 にアクセスしてみよう。
 
 `public`ディレクトリには、Webの表示に使うファイルが入っています。勝手にプログラムが生成してくれるので、いじる必要はほぼありません。
 
+#### `src/App.js`をみてみましょう。
+
+```js
+
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+```
+
+ここの`render`から`);`の場所に画面に表示させる内容が記述されてます。
