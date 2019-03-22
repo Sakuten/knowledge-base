@@ -1,6 +1,6 @@
 # データベース取扱説明
 
-「データベースとは何か？」というところから、`flask_sqlalchemy`を用いたデータベースモデル構築の解説までを行います。
+「データベースとは何か?」というところから、`flask_sqlalchemy`を用いたデータベースモデル構築の解説までを行います。
 
 ソースコードにある各モデルの正確な情報についてはAPI（もしくはソースコード中のドキュメントコメント）を参照してください。
 
@@ -10,7 +10,7 @@
 
 一人で頭を悩ませるよりは、人に聞くほうがずっと早いし、全体の時間を無駄にしません。遠慮なく篠川（shino）なんかに聞いてください。
 
-## Q: データベースってなに？
+## Q: データベースってなに?
 
 ## A: あとで使いやすいように整理されたデータです。
 
@@ -22,7 +22,7 @@
 
 これを実現する仕組みが、**データベース(database, DB)**と呼ばれるものです。
 
-## Q: じゃあ創作展のサーバでは、実際どのように情報が整理されてるの？
+## Q: じゃあ創作展のサーバでは、実際どのように情報が整理されてるの?
 
 ## A: リレーショナルモデルにより、応募先、ユーザー、応募情報などにまとめています。\*\*
 
@@ -32,7 +32,7 @@
 
 -   応募先ID
 -   応募者ID
--   複数人申し込みの代表者かどうか
+-   複数人申し込みの代表者であるのか
 
 これらをひとまとめの情報の集まり、**レコード(record)**として扱います。
 実際にはこれらに、「現在の状態（デフォルトで『抽選待ち』）」「複数人申し込みのほかのメンバー」などの情報が加わることもあります。
@@ -46,7 +46,7 @@
 
 そして重要なのが、この`application`以外に`user`、`lottery`などたくさんのテーブルがあり、その中のレコード同士が**紐付けられている**ということです。
 
-つまり、1つ`application`のレコードを見つけたら、それに対応する`user`（応募者の情報・状態）や`lottery`（応募先）のレコードに**芋づる式にたどり着ける**のです。
+つまり1つ`application`のレコードを見つけたら、それと対応する`user`（応募者の情報・状態）や`lottery`（応募先）のレコードに**芋づる式にたどり着ける**のです。
 
 この仕組みは**リレーショナルモデル(relational model)**といい、それを使ったデータベースは**リレーショナルデータベース(relational database)**と呼ばれます。
 
@@ -176,7 +176,7 @@ C:\Users\W\.virtualenvs\backend-T-5B7hGY\lib\site-packages\flask_sqlalchemy\__in
 
   それから、`primary_key=True`を設定できるカラムは、テーブルごとに１つ必ず設ける必要があります。
 
-  また、下の例からもわかるように、`id`以外のカラムが自動で設定されることもありません（ただし、後でもさらっと触れますが、カラムによってはデフォルト値が設定されていることもあります）。
+  また、下の例からもわかるように、`id`以外のカラムが自動で設定されることもありません（ただし、後でもさらっと触れますがカラムによってはデフォルト値が設定されていることもあります）
 
 ```python
 >>> anonymous = Student()
@@ -191,11 +191,11 @@ C:\Users\W\.virtualenvs\backend-T-5B7hGY\lib\site-packages\flask_sqlalchemy\__in
   以上が基本的なデータベースの扱い方です。
   気になるところなどあれば、DiscordかGoogleへ。
 
-## リレーションって何なの？
+## リレーションって何なの?
 
   さて、ここからは実際のソースコードを見ていきましょう。データベースの定義系は`api/models.py`に集められています。
 
-  `unique=True`（重複なし）やら`default=0`（設定しなかった場合のデフォルト値）やらがありますが、大体は理解できるのではないでしょうか。
+  `unique=True`（重複なし）やら`default=0`（設定しなかった場合のデフォルト値）やらがあります、大体、理解できるのではないでしょうか。
 
   しかし、100行目周辺で見たことのないやつが出てきます。例えば、`Application`テーブルのこいつ：
 
@@ -281,12 +281,12 @@ True
 True
 ```
 
-  何が起きたかわかりましたか。
+  何が起きたかわかったでしょうか。
 
   まず、`taroApplication`を作成するとき、`user_id`に`user`のレコードの1つ、`taro`の`id`を渡しましたね。
-  `MyApplication`にある`user_id = db.Column(db.Integer, db.ForeignKey('my_user.id'))`の`ForeignKey`というのは、「`my_user`テーブルのレコードの`id`がここに入る」という意味だったのです。
+  `MyApplication`に`user_id = db.Column(db.Integer, db.ForeignKey('my_user.id'))`の`ForeignKey`があります。これは、「`my_user`テーブルのレコードの`id`がここに入る」という意味だったのです。
 
-  そしてこの`taroApplication`をデータベースに追加したときに、`taroApplication.user`が`taro`に設定されました。`taroApplication`を作ったときには`user_id`しか設定しなかったにもかかわらずです。
+  そしてこの`taroApplication`をデータベースに追加したとき、`taroApplication.user`が`taro`に設定されました。`taroApplication`を作ったときには`user_id`しか設定しなかったにもかかわらずです。
 
   なんとな区、わかってきたでしょうか。
 
@@ -294,11 +294,11 @@ True
 
   このオブジェクト同士の結びつき（ここでは`MyUser`である`taro`と、`MyApplication`の`taroApplication`）が、**リレーション**と呼ばれるものです。
 
-  ちなみに、１つの`my_user`に対して、複数の`my_application`を関連付けることもできます。つまり、`taroApplication2`とかがいくらでも作れるよ、ということです。実際の創作運用をイメージすればわかりやすいのではないでしょうか。１人が１日に何度もいろんなクラスに応募しますよね。ここらへんの`relationship`の関係について詳しく知りたいということがあったら`SQLAlchemy`の[公式ドキュメント](https://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html)を参照したり、"One to Many" "One to One"などとググってみてください。
+  ちなみに、１つの`my_user`に対して、複数の`my_application`を関連付けることもできます。つまり、`taroApplication2`とかがいくらでも作れるよ、ということです。実際の創作運用をイメージすればわかりやすいのではないでしょうか。１人が１日に何度もいろんなクラスに応募しますよね。ここらへんの`relationship`の関係について詳しく知りたいということがあれば、`SQLAlchemy`の[公式ドキュメント](https://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html)を参照したり、"One to Many" "One to One"などとググってみたりしてください。
 
   この他、いろいろ実験してみてください。`taroApplication.user_id = jiro.id`などのように情報を書き換えてデータベースに追加し直すと、何が起きるでしょうか（`db.session.commit()`を忘れずに）。
 
-  １つ補足として、ソースコードの`ForeignKey`には`ondelete='CASCADE'`というのがついていますが、これは「`relastionships`先がデータベースから削除されたら、自分自身もデータベースから削除する」という意味です。
+  １つ補足として、ソースコードの`ForeignKey`には`ondelete='CASCADE'`というのがついています。これは「`relastionships`先がデータベースから削除されたら、自分自身もデータベースから削除する」という意味です。
 
 ## `GroupMember`がなんかごちゃごちゃしてるんだが
 
@@ -308,11 +308,11 @@ True
 
   `GroupMember`には、３つの`ForeignKey`、３つの`relationship`がありますね。`member`という`GroupMember`オブジェクトがあったとき、`member.user`が「こういうメンバー」の`User`オブジェクト、`member.own_application`がその人自身の応募データ（`Application`）、そして`member.rep_application`が代表者の`Application`を指しています。
 
-  これら３つを`SQLAlchemy`は見つけてきてリレーションを引く必要があるわけですが、`Application`を指す`relationships`、`ForeignKey`が２つづつあるので、どの`relation`をどの`ForeignKey`を頼りに持ってくればいいのかわからなくなるのです。
+  これら３つを`SQLAlchemy`は見つけてきてリレーションを引く必要があります。しかし、`Application`を指す`relationships`・`ForeignKey`が２つづつあるので、どの`relation`をどの`ForeignKey`を頼りに持ってくればいいのかわからなくなるのです。
 
   これを助けるのが、`foreign_keys=[...]`というやつですね。
 
-  もう１つ説明するのは`backref`ですね。ここに自身のテーブル名（ここでは`__tablename__ = 'group_members'`と最初の方に指定されていますね）を渡すことで、`GroupMember`から`rep_application`というリレーションが張られるだけでなく、`representative`を代表者の`Application`としたときに、`representative.group_members`と、逆向きのリレーションも自動的に追加されるのです。魔法みたいですね。
+  もう１つ説明するのは`backref`ですね。ここに自身のテーブル名（ここでは`__tablename__ = 'group_members'`と最初の方に指定されていますね）を渡します。そうして、`GroupMember`から`rep_application`というリレーションが張られるだけでなく、`representative`を代表者の`Application`としたとき、`representative.group_members`と、逆向きのリレーションも自動的に追加されるのです。魔法みたいですね。
 
 ## ソースコードの`Application`について―何だこいつら
 
@@ -320,7 +320,7 @@ True
 
   ソースコードの`Application`を見ると、`db.Column`以外に`advantage`とか、`get_advantage`とか、わけのわからん者たちがいますね。
 
-  実は今まで、`alice`や`taroApplication`など、Python上のオブジェクトをデータベースに追加するような言い方をしてきました。実際そのように扱えるように設計されているのですが、内部的に厳密に言うと、少し違います。
+  実は今まで、`alice`や`taroApplication`など、Python上のオブジェクトをデータベースに追加するような言い方をしてきました。実際そのように扱うために設計されているのですが、内部的に厳密に言うと、少し違います。
 
   もう一度`alice`の例を見てみましょう。
 
@@ -330,7 +330,7 @@ True
 >>> db.session.commit()
 ```
 
-  この`db.session.add`と`db.session.commit`でデータベースに追加されるのは、`alice`という`Student`クラスのオブジェクトではなく、`alice.id`、`alice.name`という`db.Column`たちです。
+  この`db.session.add`と`db.session.commit`でデータベースに追加されるのは、`alice`という`Student`クラスのオブジェクトでなく、`alice.id`、`alice.name`という`db.Column`たちです。
 
   Excelをイメージしてみてください。``SQLAlchemy`の内部では、`alice`や`bob\`はこのように見えています。
 
@@ -375,15 +375,15 @@ add <MyApp2.2 column=4 field=8> to the db
 
 `SQLAlchemy`は、`db.session.commit`が呼ばれると、`db.Column`たち（ここでは`id`と`column`）**のみ**をデータベースに保存し、そうでない情報（`field`）は**捨てられます**。
 
-その後`〇〇.query`が使用されてデータベースの情報を取り出す段になると、`id`と`column`をデータベースから引き出して、`MyApp2(id=xx, column=xx)`のように`MyApp2`オブジェクトを作り直し、`MyApp2.query.all()`の結果として返されるわけです。ここで`field`は捨てられるわけです。
+その後`〇〇.query`が使用されてデータベースの情報を取り出す段になります。そして、`id`と`column`をデータベースから引き出して、`MyApp2(id=xx, column=xx)`のように`MyApp2`オブジェクトを作り直します。そして、`MyApp2.query.all()`の結果として返されるわけです。ここで`field`は捨てられるわけです。
 
-※ここでさらに内部的にごにょごにょしたことを言うと、いままでの`alice`や`taroApplication`などの例では、`add(x)`したときからオブジェクト（`alice`、`taroApplication`）が残っています。それを`SQLAlchemy`は把握していて、いちいち作り直さずに`alice`、`taroApplication`と全く同じオブジェクトを返しています。これは`alice is Student.query.filter_by(name="Alice").first()`とやれば確かめられます（この`is`による比較は、`alice`と`Student.query....`がメモリ上の全く同じものを指している場合のみ`True`になります）。
+※ここでさらに内部的にごにょごにょしたことを言うと、いままでの`alice`や`taroApplication`などの例では、`add(x)`したときからオブジェクト（`alice`、`taroApplication`）が残っています。それを`SQLAlchemy`は把握していて、いちいち作り直さずに`alice`、`taroApplication`と全く同じオブジェクトを返しています。これは`alice is Student.query.filter_by(name="Alice").first()`とやれば確かめられます（この`is`による比較は、`alice`と`Student.query....`がメモリ上の全く同じものを指している場合のみ`True`になります）
 
 実験するには、`m = MyApp2(column=xx)`のように入力して、`field`を設定してデータベースに追加し、もう一度`MyApp2.query.all()`してみてください。こちらの場合は`field`情報が保たれているでしょう。上のように`is`を使えば、`m`と`query.all()`で返される`MyApp2`オブジェクトが全く同じものを指していることがわかるはずです。
 
 さて、話題をソースコードに戻します。`Application`の`advantage`はユーザーが応募したとき（＝データベースに`Application`を追加するとき）に計算されるのではなく、抽選時に応募者の人数やグループ応募か否かなどによってその場で（＝データベースから`Application`を取り出した後）計算されるものです。なので`db.Column`としてデータベースに保存するのではなく、取り出した後の`Application`オブジェクトのフィールドして後から代入する形となっています。`draw.py`の`set_group_advantage`なども参照してください。
 
-## お疲れ様でした！
+## お疲れ様でした!
 
 長々とお読みいただきありがとうございます。大変でしたね。書くのも大変でした。
 
