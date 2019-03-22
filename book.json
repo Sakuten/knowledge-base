@@ -1,3 +1,4 @@
 {
-  "language": "ja"
+  "language": "ja",
+  "plugins": ["hints"]
 }
