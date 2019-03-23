@@ -46,11 +46,11 @@ create-react-app hello-sakuten
 `cd hello-sakuten`は、hello-sakutenというフォルダを開くということで、
 `npm start`というのはサーバーを起動させるコマンドです。
 
-### なぜ表示されたのだろうか？コードをみてみよう
+### なぜ表示されたのだろうか?　コードをみてみよう
+
  ディレクトリ・ファイル構成はこのようになっています。
 
 ```shell
-
  ❯ tree -I node_modules
 .
 ├── README.md
