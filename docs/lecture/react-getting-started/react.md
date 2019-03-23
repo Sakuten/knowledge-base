@@ -31,12 +31,14 @@ create-react-app hello-sakuten
 
 ### サーバーを起動してみよう
 
-```
-cd hello-sakuten
-npm start
-```
+    cd hello-sakuten
+    npm start
 
-http://localhost:3000 にアクセスしてみよう。
+<!-- textlint-disable -->
+
+<http://localhost:3000> にアクセスしてみよう。
+
+<!-- textlint-enable -->
 
 ![reactstart](./reactstart.png)
 このように表示させることができれば、あなたはサーバーを起動させることができました。
