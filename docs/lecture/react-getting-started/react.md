@@ -8,7 +8,7 @@
 
 [JavaScript(ES6) 入門](https://sakuten-wiki.netlify.com/docs/lecture/js-getting-started.html)
 
-## React.jsってなんですか？
+## React.jsってなんですか?
 
 JavaScriptで書かれたライブラリです。Webの見た目を表示させるために使われます。
 
