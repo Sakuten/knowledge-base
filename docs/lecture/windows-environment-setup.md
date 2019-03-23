@@ -31,13 +31,23 @@
 10. `docker-compose up`
 11. 完了。あとはWindows側から更新すれば自動ビルドがかかります
 
+<!-- textlint-disable no-dead-link -->
+
 うまく行っていれば、ブラウザで[http://localhost:8000/](http://localhost:8000/)を開くと、創作展のWeb抽選システムのトップページが表示されます。
+
+<!-- textlint-enable no-dead-link -->
 
 ## 注意・補足
 
 * 次回以降は手順6の代わりに`docker-machine start default`とし、7から始めましょう。
 * 手順10で`docker-compose up -d`とすると、バックグラウンドでdockerを走らせることができます。
+
+<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
+
 * `devenv/scripts`以下のスクリプトは、手順7で開いた仮想マシン上で実行してください。
+
+<!-- textlint-enable ja-technical-writing/no-doubled-joshi -->
+
 * docker-machineに接続しているコマンドプロンプトを閉じてもVirtualBoxは動いています。
   なので、シャットダウンするときに「VirtualBoxがシャットダウンを妨げている」というような画面が出てくるでしょう。
   無視して強制的にシャットダウンしても問題はないのですが、気になるようであれば、
