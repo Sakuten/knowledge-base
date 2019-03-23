@@ -70,7 +70,6 @@ create-react-app hello-sakuten
 └── yarn.lock
 
 2 directories, 13 files
-
 ```
 
 `package.json`というのは、使うパッケージ（プログラム）を宣言したり、バージョンを定めたりしています。
@@ -82,7 +81,6 @@ create-react-app hello-sakuten
 #### `src/App.js`をみてみましょう。
 
 ```js
-
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
