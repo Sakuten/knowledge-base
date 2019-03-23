@@ -1,6 +1,10 @@
-# Windows 10 Pro以外でのDockerインストール方法
+# WindowsのDockerインストール方法
 
-ちょっと手順が特殊です。
+WindowsバージョンのDockerとしては、[Docker for Windows](https://docs.docker.com/docker-for-windows/)を使えます。
+
+しかし、これはWindows 10 Pro、Enterprise、Educationでしか動作しません。
+
+以下はWindows 10 Home、Windows 8以下での方法です。
 
 1. [Chocolateyをインストール](https://chocolatey.org/install)
 2. [VirtualBoxをインストール](https://www.virtualbox.org/wiki/Downloads)
