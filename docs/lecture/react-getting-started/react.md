@@ -111,7 +111,6 @@ class App extends Component {
 }
 
 export default App;
-
 ```
 
-ここの`render`から`);`の場所に画面に表示させる内容が記述されてます。
+ここの`render`から`);`の場所が画面に表示させる内容です。
