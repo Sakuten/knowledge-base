@@ -54,7 +54,8 @@
 
 <!-- textlint-disable no-dead-link -->
 
-上記の作業がうまくいっていれば、ブラウザで[http://localhost:8000/](http://localhost:8000/)を開くと、創作展Web抽選システムのトップページが表示されるはずです。
+上記の作業がうまくいっていれば、ブラウザで[http://localhost:8000](http://localhost:8000)を開くと、創作展Web抽選システムのトップページが表示されるはずです。
+※Docker Toolboxを利用した場合は[http://192.168.99.100:8000/](http://192.168.99.100:8000/)が開きます。
 
 <!-- textlint-enable no-dead-link -->
 
