@@ -1,54 +1,113 @@
-# Windows 10 Pro以外でのDockerインストール方法
+# Windowsでの開発方法
 
-ちょっと手順が特殊です。
+## 大まかな流れ
 
-1. [Chocolateyをインストール](https://chocolatey.org/install)
-2. [VirtualBoxをインストール](https://www.virtualbox.org/wiki/Downloads)
-3. [Git for Windowsをインストール](https://gitforwindows.org/)
-4. docker-machineをインストール: `choco install docker-machine -y`
-5. Powershellで`fsutil behavior set SymlinkEvaluation L2L:1 R2R:1 L2R:1 R2L:1`と実行
-6. コマンドプロンプト、PowerShell、Git Bashのいずれかで以下を実行し、仮想マシンを作る
+主に必要なプログラムはDockerとGitです。
+それぞれどのようなものかざっくりと説明すると、
 
-    ```bash
-    docker-machine create --driver virtualbox default
-    ```
+* Dockerは共通の開発用マシン（コンテナ）をそれぞれのPCで構築できるプログラム
+* Gitは複数人でプログラムを書くときに特に有用なバージョン管理ツール
 
-7. 以下を実行し、仮想マシンに入る
+となります。詳しい説明はネット上にたくさんあるので、ググってみてください。
 
-    ```bash
-    docker-machine ssh default -L 8000:localhost:8000 -L 8081:localhost:8081 -L 8888:localhost:8888
-    ```
+これらをインストールした上で、以下の流れで開発をします。
 
-8. （ここから仮想マシン上で）以下のコマンドを実行し、docker-composeをインストールする
+1. Dockerのコンテナを立ち上げる
+2. Gitで管理しながらプログラムを書く
+3. devenvの`scripts/`ディレクトリにあるスクリプトで、Dockerを通しテスト等を行う
+4. push、PR作成
 
-    ```bash
-    sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$  (uname   -m) -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
-    ```
+ここからは、それぞれについてOSごとに解説します。
 
-9.  `devenv`のディレクトリへ`cd`
-    ※Cドライブが`/c/`にマウントされているので、パスは`/c/Users/〇〇/...`のようになるでしょう。
-10. `docker-compose up`
-11. 完了。あとはWindows側から更新すれば自動ビルドがかかります
+## 手順0：DockerとGitのインストール
+
+* Windows 10 Pro、Enterprise、Education
+  [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)と、[Git for Windows](https://gitforwindows.org/)をインストールします。
+* その他のWindows
+  Docker Desktopが動作しないので、[Docker Toolbox](https://docs.docker.com/toolbox/overview/)というプログラムを利用し、VirtualBoxの中でDockerを走らせることにします。
+  Gitは同梱されています。
+
+## 手順1：Dockerのコンテナを立ち上げる
+
+まず最初に、開発環境が含まれるdevnevリポジトリをクローンします（Gitの解説はこの記事では行いません）。
+
+```powershell
+> git clone https://github.com/SakutenDev/devenv --recursive
+```
+
+ここからDockerを起動します。
+
+* Windows 10 Pro、Enterprise、Education
+  devenvディレクトリに移動して、`.\scripts\start.ps1`を実行すればOKです（※）。
+* その他のWindows
+  Docker Toolboxをインストールした時に、Docker Quickstart Terminalというリンクがデスクトップとスタートメニューに追加されています。
+  これを**右クリックして「管理者として実行」をクリック**します。
+  これによってVirtualBoxがバックグラウンドで立ち上がるので、しばらくしてクジラのアスキーアートが出てくることを確認したら、閉じて構いません。
+  このあとはdevenvディレクトリで、`.\scripts\start.ps1`を実行してください（※）。
+
+※初回はDockerコンテナのビルドが行われるため、時間がかかり、エラーも発生するかもしれないので、以下の手順を踏むことをおすすめします。
+
+```powershell
+> .\scripts\build.ps1
+> docker-compose up
+```
 
 <!-- textlint-disable no-dead-link -->
 
-うまく行っていれば、ブラウザで[http://localhost:8000/](http://localhost:8000/)を開くと、創作展のWeb抽選システムのトップページが表示されます。
+上記の作業がうまくいっていれば、ブラウザで[http://localhost:8000/](http://localhost:8000/)を開くと、創作展Web抽選システムのトップページが表示されるはずです。
 
 <!-- textlint-enable no-dead-link -->
 
-## 注意・補足
+## 手順2：Gitで管理しながらプログラムを書く
 
-* 次回以降は手順6の代わりに`docker-machine start default`とし、7から始めましょう。
-* 手順10で`docker-compose up -d`とすると、バックグラウンドでdockerを走らせることができます。
+実際に動かすプログラムは、フロントエンドなら`devenv/frontend`、バックエンドなら`devenv/backend`のディレクトリでGitにより管理されています。各ディレクトリで、以下の流れで開発を行います。
 
-<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
+Gitの解説はここでは行わないので、わからない単語は適宜Discordで聞くか、Googleで調べてください。
 
-* `devenv/scripts`以下のスクリプトは、手順7で開いた仮想マシン上で実行してください。
+初回は以下のコマンドを実行してから開始してください。
+GitHubアカウントの作成も忘れずに。
 
-<!-- textlint-enable ja-technical-writing/no-doubled-joshi -->
+```powershell
+> git checkout develop
+> git pull origin develop
+> git flow init -d
+```
 
-* docker-machineに接続しているコマンドプロンプトを閉じてもVirtualBoxは動いています。
-  なので、シャットダウンするときに「VirtualBoxがシャットダウンを妨げている」というような画面が出てくるでしょう。
+1. GitHubに上がっているIssueの中から自分が担当するものを決め、自分をassignします。
+2. `git flow feature start xxx-some-feature-name`と入力します。`xxx-...`となっている部分は、何の変更かわかるように名前をつけてください。
+3. ひとまとまりの作業（１ファイル・１挙動の追加・編集）ごとにコミットします。
+
+## 手順3：Dockerを通しテスト等を行う
+
+機能の追加・変更を行うたび、そのためのテストを作り、正しく動作するか確かめましょう。
+
+フロントエンドは（フロントエンドの方お願いします）、バックエンドは`test/`ディレクトリのファイルに、他のテストの書き方にならってテストを追加します。わからないことがあれば、手っ取り早く他の開発者に質問しましょう。
+
+テストは、`devenv/`ディレクトリに移動してから、以下のコマンドで行います。
+
+ ```powershell
+ > .\scripts\unit_test.ps1 [frontend|backend]
+ ```
+
+テストがすべて通る状態になったら、最後の手順に移ります。
+
+## 手順4：push、PR作成
+
+`git push origin feature/xxx-some-feature-name`として、GitHubリポジトリにpushします。
+
+この状態でGitHubのページを開き、PR（プルリクエスト）を作成してください。
+
+書き方は見ればわかると思います。
+
+このPRがmoderatorの人たちにapprove（認証）されると、書いたプログラムは採用され、作業はおしまいです。
+
+お疲れ様でした。
+
+## Docker Toolboxを使った場合の補足
+
+* Docker Quickstart Terminalでも、PowerShellの代わりとして、
+  Gitや`scripts/`以下のスクリプトを走らせることができます。
+* バックグラウンドでVirtualBoxが走り続けているため、
+  シャットダウンするときに「VirtualBoxがシャットダウンを妨げている」というような画面が出てくるでしょう。
   無視して強制的にシャットダウンしても問題はないのですが、気になるようであれば、
-  コマンドプロンプトで`docker-machine stop default`としましょう。
+  `docker-machine stop default`を実行しましょう。
