@@ -1,4 +1,4 @@
-# Windowsでの開発方法
+﻿# Windowsでの開発方法
 
 ## 大まかな流れ
 
@@ -21,10 +21,10 @@
 
 ## 手順0：DockerとGitのインストール
 
-* Windows 10 Pro、Enterprise、Education
+* Windows 10 Pro、Enterprise、Education  
   [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)と、[Git for Windows](https://gitforwindows.org/)をインストールします。
-* その他のWindows
-  Docker Desktopが動作しないので、[Docker Toolbox](https://docs.docker.com/toolbox/overview/)というプログラムを利用し、VirtualBoxの中でDockerを走らせることにします。
+* その他のWindows  
+  Docker Desktopが動作しないので、[Docker Toolbox](https://docs.docker.com/toolbox/overview/)というプログラムを利用し、VirtualBoxの中でDockerを走らせることにします。  
   Gitは同梱されています。
 
 ## 手順1：Dockerのコンテナを立ち上げる
@@ -37,12 +37,12 @@
 
 ここからDockerを起動します。
 
-* Windows 10 Pro、Enterprise、Education
+* Windows 10 Pro、Enterprise、Education  
   devenvディレクトリに移動して、`.\scripts\start.ps1`を実行すればOKです（※）。
-* その他のWindows
-  Docker Toolboxをインストールした時に、Docker Quickstart Terminalというリンクがデスクトップとスタートメニューに追加されています。
-  これを**右クリックして「管理者として実行」をクリック**します。
-  これによってVirtualBoxがバックグラウンドで立ち上がるので、しばらくしてクジラのアスキーアートが出てくることを確認したら、閉じて構いません。
+* その他のWindows  
+  Docker Toolboxをインストールした時に、Docker Quickstart Terminalというリンクがデスクトップとスタートメニューに追加されています。  
+  これを**右クリックして「管理者として実行」をクリック**します。  
+  これによってVirtualBoxがバックグラウンドで立ち上がるので、しばらくしてクジラのアスキーアートが出てくることを確認したら、閉じて構いません。  
   このあとはdevenvディレクトリで、`.\scripts\start.ps1`を実行してください（※）。
 
 ※初回はDockerコンテナのビルドが行われるため、時間がかかり、エラーも発生するかもしれないので、以下の手順を踏むことをおすすめします。
