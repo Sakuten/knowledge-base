@@ -32,7 +32,7 @@
 まず最初に、開発環境が含まれるdevnevリポジトリをクローンします（Gitの解説はこの記事では行いません）。
 
 ```powershell
-> git clone https://github.com/SakutenDev/devenv --recursive
+> git clone https://github.com/Sakuten/devenv --recursive
 ```
 
 ここからDockerを起動します。
